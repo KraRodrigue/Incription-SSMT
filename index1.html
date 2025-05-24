@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<!--La grande boite qui contient le background et touts les autres element-->  
+
+  <div class="fond">
+
+
+   <!--La boite qui conttient les titre , les formulaire  et le bouton submit -->    
+<div class="wrapper1">
+    <span class="border"></span>   
+
+    <div class="wrapper">
+      <div class="form-box-login">
+        <div class="animation">
+
+        </div>
+
+       <!--La boite qui continet le titre -->          
+        <div class="one-box">
+          <h2> Information Personnelle</h2>
+        </div>
+
+       <!-------- la boite qui contient le formulaire----------->        
+        <div class="two-box">   
+          <form action="" >
+
+           <!--Dans le formulaire, voicie une première boite qui contient le Nom et le Prenom-->            
+            <div class="name">
+              <div class="box-input">
+                <input type="text" required>
+                <span class="nom">Nom</span>
+              </div>
+
+              <div class="box-input">
+                <input type="text"required>
+                <span class="username">Prénoms</span>
+              </div>
+            </div>
+
+           <!--Dans le formulaire, voici deuxieme boite qui contient da date et  et le genre -->            
+            <div class="genre">
+              <div class="box-input"  >
+                <input type="date" required>
+              </div>
+                            
+              <div class="box-input" >
+                <div class="genre1">
+                  <label for="">Sexe :</label>
+
+                  <select name="" id="" class="genre-select">
+                    <option value="">Homme</option>
+                    <option value="">Femme</option>
+                  </select>
+                </div>                             
+              </div>
+            </div> 
+
+
+           <!--La boite qui contient le les carte etudiante et CNi-->            
+            <div class="carte">
+              <div class="box-input" >
+                <input type="text"required >
+                <span class="carte-etudiante">N°de la Carte Etudiante</span>
+              </div>
+
+              <div class="box-input">
+                <input type="text"required>
+                <span class="cni-att">N° CNI ou Attestation</span>
+              </div>
+            </div>
+          
+           <!--La boite qui contient les choire de filiere de te Niveau--> 
+            <div class="option">
+              <div class="box-input1">
+
+                <div class="check ">
+                  <label for="niveau0" class="select">Filiere classsique</label>
+                  <input type="checkbox" id="niveau0">
+                </div>
+
+                <div class="option1">
+                  <select name="" id="niveau">
+                    <option value="">L1</option>
+                    <option value="">L2</option>
+                    <option value="">L3 Physique</option>
+                    <option value="">L3  Chimie</option>
+                    <option value="">L3 Science Physique</option>
+                    <option value="">M1 Physique</option>
+                    <option value="">M1  Chimie</option>
+                    <option value="">M1 Science Physique</option>
+                    <option value="">M2 Physique</option>
+                    <option value="">M2  Chimie</option>
+                    <option value="">M2 Science Physique</option>
+                  </select>
+                </div>   
+              </div>
+
+              <div class="box-input1">
+
+                <div  class="check">
+                  <label for="filiere1" class="select">Filiere Technique</label>
+                  <input type="checkbox" id="filiere1">
+                </div>  
+
+                <div class="option2">
+                      <select name="" id="niveau1">
+                      <option value="">L2 EEAI</option>
+                      <option value="">L2 EEM</option>
+                      <option value="">L3 EEAI</option>
+                      <option value="">L3 EEM</option>
+                      <option value="">M1 EEAI</option>
+                      <option value="">M1 EEM</option>
+                      <option value="">M2  EEAI</option>
+                      <option value="">M2 EEM </option>
+                    </select>
+                </div>
+              </div> 
+            </div>
+
+<!--------La boite qui continet le bouton submit----------->
+            <div class="three-box">
+              <input type="submit" value="connexion" >
+            </div> 
+          </form>
+        </div>  
+      </div>
+    </div>
+</div>
+  </div> 
+
+  <script src="script1.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+/********La grande boite qui contient le background et touts les autres element********/
+
+.fond{
+    background-image: url(./images/image.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+/***La boite qui conttient les titre , les formulaire  et le bouton submit******/
+.wrapper1{
+    position: absolute;
+    background-color: transparent;
+    position: relative;
+    width: 400px;
+    height: 460px;
+    z-index: 10;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper{
+    background: linear-gradient(90deg, 
+              rgb(0, 255, 179) 0%, 
+              rgb(19, 213, 206) 26%, 
+              rgb(0, 255, 179) 100%);
+    position: relative;
+    width: 98%;
+    height: 98%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 6px #000;
+    z-index: 1;
+}
+
+.wrapper1::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 460px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #f70101, #97d111, #f2de01);
+    transform-origin: bottom right;
+    z-index:1;
+    animation: animate 6s linear infinite;
+}
+
+.wrapper1::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 460px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #f70101, #97d111, #f2de01);
+    transform-origin: bottom right;
+    z-index:-1;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+ 
+.border::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 460px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #2200fb, #1303fd, #0901f2);
+    transform-origin: bottom right;
+    z-index:1;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.border::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 460px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #2200fb, #1303fd, #0901f2);
+    transform-origin: bottom right;
+    z-index:1;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form-box-login{
+    height: 100%;
+    width: 100%;
+}
+
+/********La boite qui continet le titre*********/
+.one-box{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one-box h2{
+    color: #1f1c1c;
+    font-size: 2rem;
+}
+
+/**********la boite qui contient le formulaire******/
+.two-box{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**chaque input est dans une div que j'ai appelé box-input**/
+.two-box .box-input{
+    height: 60px;
+    width: 400px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two-box .box-input input{
+    position: relative;
+    background-color: #00000017;
+    border:2px solid rgb(233, 217, 217) ;
+    box-shadow: 0px 2px 4px #6d6a6a ;
+    height: 90%;
+    width: 90%;
+    border-radius: 50px;
+    padding: 20px;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    z-index:10;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.two-box .box-input span{
+    position: absolute;
+    left: 40px;
+    color: #1b1a1a;
+    font-size: 25px;
+    font-weight: bold;   
+    transition: .4s;
+}
+
+.two-box .box-input input:valid ~ span,
+.two-box .box-input input:focus ~ span
+{
+    color: #363434;
+    color: #1b1a1a;
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateY(-37px);
+}
+
+
+.two-box .box-input input:focus{
+    border:2px solid rgb(74, 153, 162) ;  
+    background-color: #0000004a; 
+}
+
+
+.box-check{
+    height: 30px;
+    padding-left: 24px;
+}
+
+.box-check label{
+    color: #1b1a1a;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/*********La boite qui continet le bouton submit*******/
+.three-box{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.three-box input{ 
+    height: 50%;
+    width: 90%;
+    border: none;
+    background-color: #fff;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #1f1c1c;
+    font-weight: bold;    
+    cursor: pointer;
+    
+}
+
+.three-box input:hover{
+    background: linear-gradient(90deg, rgb(192, 93, 133) 0%, rgb(20, 153, 149) 26%, rgb(64, 168, 188) 100%);
+}
+
+
